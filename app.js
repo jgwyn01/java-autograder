@@ -4,7 +4,7 @@
 
 // Judge0 via RapidAPI (free account required)
 const JUDGE0_URL =
-  "https://judge0-ce.p.rapidapi.com/submissions?base64_encoded=false&wait=true";
+  "https://judge0-extra.p.rapidapi.com/submissions?base64_encoded=false&wait=true";
 
 const API_KEY = "7205be897fmsh71d4376a5af3dc8p1ce41ejsn88299e69f7cb"; // <-- Replace this
 
@@ -114,7 +114,7 @@ form.addEventListener("submit", async (e) => {
       headers: {
         "Content-Type": "application/json",
         "X-RapidAPI-Key": API_KEY,
-        "X-RapidAPI-Host": "judge0-ce.p.rapidapi.com"
+        "X-RapidAPI-Host": "judge0-extra.p.rapidapi.com"
       },
       body: JSON.stringify(payload)
     });
