@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.header {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: radial-gradient(circle at top, #1d4ed8 0, #020617 60%);
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.header p {
+  margin-top: 0.5rem;
+  color: #cbd5f5;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.card {
+  background: rgba(15, 23, 42, 0.95);
+  border-radius: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.card h2 {
+  margin-top: 0;
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+select,
+input[type="file"] {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #4b5563;
+  background: #020617;
+  color: #e5e7eb;
+  font-size: 0.9rem;
+}
+
+select:focus,
+input[type="file"]:focus {
+  outline: 2px solid #3b82f6;
+  border-color: #3b82f6;
+}
+
+button {
+  margin-top: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #3b82f6, #a855f7);
+  color: white;
+  transition: transform 0.05s ease, box-shadow 0.05s ease, opacity 0.2s ease;
+  box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
+}
+
+button:hover:enabled {
+  transform: translateY(-1px);
+  box-shadow: 0 15px 35px rgba(59, 130, 246, 0.5);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.status {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  min-height: 1.2em;
+  color: #e5e7eb;
+}
+
+.results {
+  background: #020617;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 0.8rem;
+  max-height: 400px;
+  overflow: auto;
+  border: 1px solid #4b5563;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.footer {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.75rem;
+  color: #9ca3af;
+}

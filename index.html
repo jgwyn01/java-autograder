@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Java Auto-Grader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Java Auto-Grader</h1>
+    <p>Upload a <code>.java</code> file and run it against instructor tests.</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Submit Your File</h2>
+      <form id="uploadForm">
+        <div class="form-group">
+          <label for="assignmentId">Assignment</label>
+          <select id="assignmentId" name="assignmentId" required>
+            <!-- You can customize these IDs to match actual problems -->
+            <option value="hello-test">Hello Class — Basic Test</option>
+            <option value="unit3-strings-ps1">Unit 3 – Strings PS #1</option>
+            <option value="unit4-2darrays-ps1">Unit 4 – 2D Arrays PS #1</option>
+            <option value="hiddenword-frq">AP CSA – HiddenWord</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="javaFile">Java File (.java)</label>
+          <input
+            type="file"
+            id="javaFile"
+            name="javaFile"
+            accept=".java"
+            required
+          />
+        </div>
+
+        <button type="submit" id="submitBtn">Run JUnit Tests</button>
+        <p id="status" class="status"></p>
+      </form>
+    </section>
+
+    <section class="card">
+      <h2>Results</h2>
+      <pre id="results" class="results">No submission yet.</pre>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <small>Powered by GitHub Pages + a backend JUnit grader API.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
